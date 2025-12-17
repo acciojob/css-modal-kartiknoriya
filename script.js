@@ -6,6 +6,7 @@ const closeBtn = document.querySelector('.close-modal');
 // Open modal
 openBtn.addEventListener('click', () => {
   modal.classList.add('show');
+  modal-content.classList.add('show');
 });
 
 // Close modal on close button
