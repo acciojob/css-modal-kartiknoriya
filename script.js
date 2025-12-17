@@ -1,29 +1,28 @@
-//your JS code here. If required.
-const openBtn = document.querySelector('#openModal');
-const modal = document.querySelector('.modal');
-const closeBtn = document.querySelector('.close-modal');
+const openBtn = document.getElementById("openModal");
+const modal = document.querySelector(".modal");
+const closeBtn = document.querySelector(".close-modal");
 
-// Open modal
-openBtn.addEventListener('click', () => {
-  modal.classList.add('show');
-  modal-content.classList.add('show');
+
+openBtn.addEventListener("click", () => {
+  modal.style.display = "block";
 });
 
-// Close modal on close button
-closeBtn.addEventListener('click', () => {
-  modal.classList.remove('show');
+
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
 });
 
-// Close modal when clicking outside modal-content
-modal.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    modal.classList.remove('show');
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
   }
 });
 
-// (Optional but recommended) Close modal with ESC key
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') {
-    modal.classList.remove('show');
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    modal.style.display = "none";
   }
 });
+
